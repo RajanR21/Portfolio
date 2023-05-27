@@ -1,9 +1,30 @@
-import React from 'react'
-import {motion} from "framer-motion";
+import React, { useRef } from 'react'
+import {animate, motion} from "framer-motion";
 import  Typewriter from "typewriter-effect";
-import {BsArrowUpRight} from "react-icons/bs"
+import {BsArrowUpRight, BsChevronDown} from "react-icons/bs"
+import me from "../assests/logo.png"
 
 const Home = () => {
+
+    const clientCount = useRef(null);
+    const ProjectCount = useRef(null);
+
+    const animationClientCount = ()=> {
+         animate(0 , 100 , {
+            duration : 1 , 
+            onUpdate : (v) => {
+                (clientCount.current.textContent = v.toFixed())
+            }
+         })
+    }
+    const animationProjectCount = ()=> {
+        animate(0 , 500 , {
+           duration : 1 , 
+           onUpdate : (v) => {
+               (ProjectCount.current.textContent = v.toFixed())
+           }
+        })
+   }
     const animations = {
         h1 : {
             initial :{ 
@@ -52,7 +73,7 @@ const Home = () => {
 
             <article>
                 <p>
-                +<span>100</span>
+                +<motion.span whileInView={animationClientCount} ref = {clientCount}>100</motion.span>
                 </p>
                 <span>Clients Wordwide</span>
 
@@ -61,9 +82,9 @@ const Home = () => {
             <aside>
             <article>
                 <p>
-                +<span>500</span>
+                +<motion.span whileInView={animationProjectCount} ref={ProjectCount}>500</motion.span>
                 </p>
-                <span>Projects Made</span>
+                <span>Projects Done</span>
 
             </article>
 
@@ -78,10 +99,11 @@ const Home = () => {
         </div>
         </div>
     </section>
-
+ 
     <section>
         <img src = {me} alt = "Rajan" />
     </section>
+    <BsChevronDown />
     </div>
     
   )

@@ -20,7 +20,7 @@ const NavContent = ()=> (
             <a href = "#contact">Contact</a>
         </div>
 
-        <a href='mailto : official.rajanroy220@gmail.com'>
+        <a href="mailto : official.rajanroy220@gmail.com">
             <button>Email</button>
         </a>
     </>
