@@ -7,6 +7,8 @@
 @import "work";
 @import "timeline";
 @import "services";
+@import "contact";
+@import "footer";
 
 
 *{
@@ -28,7 +30,7 @@ body{
 }
 
 .discableBtn{
-    color : $color6;
-    background-color: rgb(237 , 237 , 237);
-    cursor: not-allowed;
+    color : $color6 !important;  
+    background-color: rgb(237 , 237 , 237)  !important;
+    cursor: not-allowed  !important;
 }
