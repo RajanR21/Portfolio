@@ -1,8 +1,8 @@
 import React, { useRef } from 'react'
 import {animate, motion} from "framer-motion";
 import  Typewriter from "typewriter-effect";
-import {BsArrowUpRight, BsChevronDown} from "react-icons/bs"
-import me from "../assests/logo.png"
+import {BsChevronDown} from "react-icons/bs"
+import me from "../assests/about.jpeg"
 
 const Home = () => {
 
@@ -49,6 +49,7 @@ const Home = () => {
     }
   return (
     <div id = "home">
+   
     <section>
         <div>
         <motion.h1 {...animations.h1}>
@@ -64,13 +65,7 @@ const Home = () => {
         }} />
 
         <div>
-            <a href="mailto : official.rajanv2103@gmail.com">
-                Hire Me
-            </a> 
-            <a href="#work">
-                Projects <BsArrowUpRight />
-            </a>
-
+           
             <article>
                 <p>
                 +<motion.span whileInView={animationClientCount} ref = {clientCount}>100</motion.span>
@@ -87,14 +82,6 @@ const Home = () => {
                 <span>Projects Done</span>
 
             </article>
-
-            <article data-special>
-                <p>
-                Contact
-                </p>
-                <span>official.rajanv2103@gmail.com</span>
-
-            </article>
             </aside>
         </div>
         </div>
@@ -103,7 +90,7 @@ const Home = () => {
     <section>
         <img src = {me} alt = "Rajan" />
     </section>
-    <BsChevronDown />
+    
     </div>
     
   )
