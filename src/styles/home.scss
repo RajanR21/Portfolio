@@ -18,16 +18,18 @@
         }
 
         .typewriterpara {
+          font-size: medium;
           margin: 20px 0;
           height: 20px;
           letter-spacing: 5px;
+          
         }
 
         > div {
           display: flex;
           margin: 5rem 0;
           width: 70%;
-          gap: 4rem;
+          
           align-items: center;
           > a {
             &:first-of-type {
@@ -92,32 +94,15 @@
       justify-content: flex-end;
       align-items: center;
       overflow-x: hidden;
-
-      &::after {
-        content: "";
-        width: 40vmax;
-        height: 40vmax;
-        background-color: $color3;
-        position: absolute;
-        z-index: -1;
-        border-radius: 50%;
-      }
-
       > img {
-        width: 40vmax;
+        margin-top: 2rem;
+        width: 68%;
         object-fit: contain;
-        height: 40vmax;
+        box-shadow: dimgrey;
+        border-radius: 50%;
       }
     }
   }
-
-  > svg {
-    position: absolute;
-    font-size: 4rem;
-    color: $color5;
-    left: 50%;
-    bottom: 5%;
-    transform: translateX(-50%);
-    animation: animateSvg 0.7s infinite linear alternate;
-  }
 }
+
+
